@@ -1,11 +1,10 @@
 .AppWraper {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    max-width: 1000px;
     margin: 0 auto;
-    font-family: Georgia;
+    font-family: "Courier New";
     line-height: 20px;
-
 }
 
 .NavContent{
@@ -13,45 +12,5 @@
     flex-direction: row;
 }
 
-.Header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 15px;
 
-}
-.Header img{
-    width: 100px;
-    margin: 10px 0 0 10px;
-}
-.Header p {
-    padding-right: 15px;
-    font-size: 20px;
-}
-.Navigator{
-    width: 25%;
-    background-color: #daffb2;
-    padding: 15px;
-}
-.Content {
-    margin-left: 20px;
-    padding: 15px;
-    background-color: #fff1d6;
-}
-.UpperImg {
-    width: 100%;
-    margin-bottom: 15px;
-}
-.Content_AvatarInfo {
-    display: flex;
-    flex-direction: row;
-}
-.Content_Avatar {
-    width: 160px;
-    margin-right: 20px;
-}
-.Content_Info h1 {
-    font-size: 20px;
-    margin-bottom: 15px;
-}
+

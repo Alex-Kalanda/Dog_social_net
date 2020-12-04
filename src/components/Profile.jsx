@@ -23,8 +23,7 @@ const Profile = () => {
                 <div>
                     <div>post1 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Accusantium deserunt harum iur</div>
-                    <div>post23 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Accusantium deserunt harum iure laboriosam mollitia nemo nis</div>
+                    <div>post2</div>
                     <div>post3 i, nulla optio
                         porro quae quibusdam quis repellendus sed sit soluta, totam vitae
                         voluptatem voluptatum!</div>

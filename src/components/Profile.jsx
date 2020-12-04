@@ -1,5 +1,5 @@
 import React from 'react';
-import avatar from '../avatar_dog.jpg';
+import avatar from './img/avatar_dog.jpg';
 
 const Profile = () => {
     return (

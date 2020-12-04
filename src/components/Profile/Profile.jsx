@@ -1,6 +1,7 @@
 import React from 'react'
-import avatar from './img/avatar_dog.jpg'
-import classes from '../Profile.module.css'
+import avatar from '../img/avatar_dog.jpg'
+import classes from './Profile.module.css'
+import MyPosts from "./MyPosts/MyPosts";
 
 const Profile = () => {
     return (
@@ -18,18 +19,7 @@ const Profile = () => {
                     </ul>
                 </div>
             </div>
-            <div className="AllPosts">
-                <h2>My posts</h2>
-                <div>New post</div>
-                <div>
-                    <div>post1 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Accusantium deserunt harum iur</div>
-                    <div>post2</div>
-                    <div>post3  io
-                        porro quae quibusdam quis repellendus sed sit soluta, totam vitae
-                        voluptatem voluptatum!</div>
-                </div>
-            </div>
+            <MyPosts/>
         </div>
     )
 }

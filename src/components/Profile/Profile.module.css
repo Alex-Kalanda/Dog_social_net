@@ -5,19 +5,7 @@
     width: 75%;
 }
 .HeadImg {
-    width: 100%;
+    width: 128%;
     margin-bottom: 15px;
 }
-.Ava_Info {
-    display: flex;
-    flex-direction: row;
-}
-.Avatar {
-    width: 160px;
-    margin-right: 20px;
-}
-.Info h1 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
+

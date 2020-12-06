@@ -3,14 +3,15 @@
     flex-direction: column;
     max-width: 1000px;
     margin: 0 auto;
-    font-family: Arial;
+    font-family: "Lucida Console";
     line-height: 20px;
 }
 
-.NavContent{
+.NavContent {
     display: flex;
     flex-direction: row;
 }
+
 .dialogs {
     margin-left: 20px;
     padding: 15px;
@@ -23,4 +24,11 @@
     padding: 15px;
     background-color: #fff1d6;
     width: 75%;
+}
+
+.CaptionPages {
+    color: black;
+    font-size: 25px;
+    margin: 0 0 40px 30px;
+
 }

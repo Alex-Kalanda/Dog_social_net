@@ -1,3 +1,18 @@
-.dialogs {
-    font-size: 20px;
+.Messages {
+
+}
+.Dialogs {
+    display: flex;
+    flex-direction: row;
+}
+.DialogItem {
+    border-right: 2px solid black;
+}
+.MessagesOfItem {
+
+}
+
+.OneMessage {
+    margin-bottom: 15px;
+    margin-left: 40px;
 }

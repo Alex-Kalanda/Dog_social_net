@@ -6,7 +6,7 @@ import OneMessage from "./OneMessage"
 
 const Dialogs = () => {
 
-    let dialogs = [
+    let dialogsData = [
         {id: 1, name: 'Bobik'},
         {id: 2, name: 'Tyzik'},
         {id: 3, name: 'Almaz'},
@@ -29,8 +29,8 @@ const Dialogs = () => {
         {id:8, message:'Go eat sheet to garden!!!!!!'},
     ]
 
-    let dialogsElements = dialogs.map ( dialog => <Dialog name={dialog.name} id={dialog.id} /> )
-    let messagesNEWARRAY = messagesData.map ( t => <OneMessage text={t.message} id={t.id}/> )
+    let dialogsElements = dialogsData.map ( dialog => <Dialog name={dialog.name} id={dialog.id} /> )
+    let messages = messagesData.map ( text => <OneMessage text={text.message} id={text.id}/> )
 
 
 
@@ -40,7 +40,7 @@ const Dialogs = () => {
             <h1 className='CaptionPages'>Chat with your dogs-friends</h1>
             <div className={classes.Dialogs}>
                 <div className={classes.DialogItem}>{dialogsElements}</div>
-                <div className={classes.MessagesOfItem}>{messagesNEWARRAY}</div>
+                <div className={classes.MessagesOfItem}>{messages}</div>
             </div>
         </div>
     )

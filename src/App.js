@@ -11,19 +11,9 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 
 
-const App = () => {
+const App = (props) => {
 
 
-
-    let postsData = [
-        {id:1, posttext:'Hi, how are you?', likes:10 },
-        {id:2, posttext:'Privet, Medved!', likes:114 },
-        {id:3, posttext:'What do you do, tommorow?', likes:5 },
-        {id:4, posttext:'You nice man?', likes:4 },
-        {id:5, posttext:'I like Picnic', likes:107 },
-        {id:6, posttext:'I learn 16 lesson It-camasutra!', likes:54 },
-        {id:7, posttext:'Props is krytaja vesch!', likes:42 }
-    ]
 
 
 
@@ -34,8 +24,8 @@ const App = () => {
                 <div className="NavContent">
                     <Navbar/>
                     <div className="DialogsPage">
-                        <Route path = '/dialogs' render={ () => <Dialogs /> } />
-                        <Route path = '/profile' render={ () => <Profile postsData={postsData}/> } />
+                        <Route path = '/dialogs' render={ () => <Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData} /> } />
+                        <Route path = '/profile' render={ () => <Profile postsData={props.postsData}/> } />
                         <Route path = '/news' component={ () => <News /> } />
                         <Route path = '/music' component={ () => <Music /> } />
                         <Route path = '/settings' component={ () => <Settings /> } />

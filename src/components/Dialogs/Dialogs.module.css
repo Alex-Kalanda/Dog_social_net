@@ -16,3 +16,24 @@
     margin-bottom: 15px;
     margin-left: 40px;
 }
+.newMessage {
+    margin-bottom: 15px;
+    margin-left: 40px;
+}
+.newMessage button {
+    padding: 7px 15px;
+    margin-left: 15px;
+    background-color: gray;
+    color: white;
+    border-radius: 5px;
+}
+.newMessage button:hover {
+    background-color: #daffb2;
+    color: black;
+    border: 1px solid gray;
+}
+.newMessage input {
+    padding: 7px 15px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}

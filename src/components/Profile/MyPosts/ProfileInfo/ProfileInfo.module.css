@@ -1,6 +1,7 @@
 .Ava_Info {
     display: flex;
     flex-direction: row;
+    margin-bottom: 15px;
 }
 .Avatar {
     width: 160px;

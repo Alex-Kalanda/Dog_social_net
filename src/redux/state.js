@@ -1,5 +1,4 @@
 
-
 let state = {
     posts : [
         {id:1, posttext:'Hi, how are you?', likes:10 },
@@ -32,4 +31,15 @@ let state = {
         {id:8, message:'Go eat sheet to garden!!!!!!'},
     ]
 }
+
+ export let addPost = (postMessage) => {
+    let newPost = {
+        id: 5,
+        posttext: postMessage,
+        likes: 0
+    }
+    state.posts.push(newPost)
+}
+
+
  export default state;

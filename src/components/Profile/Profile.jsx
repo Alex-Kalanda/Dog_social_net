@@ -9,13 +9,14 @@ import ProfileInfo from "./MyPosts/ProfileInfo/ProfileInfo";
 
 const Profile = (props) => {
 
-
-
     return (
         <div className={classes.Content}>
             <img className={classes.HeadImg} src={SunUnderWater} alt="HeadImg"/>
             <ProfileInfo />
-            <MyPosts postsData={props.postsData}/>
+            <MyPosts
+                postsData={props.postsData}
+                addPost={props.addPost}
+            />
         </div>
     )
 }

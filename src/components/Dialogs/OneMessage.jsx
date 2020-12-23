@@ -3,8 +3,13 @@ import classes from './Dialogs.module.css'
 
 
 const OneMessage = (props) => {
+
+
     return (
-        <div className={classes.OneMessage}>{props.text}</div>
+        <div>
+            <div className={classes.OneMessage}>{props.text}</div>
+        </div>
+
     )
 }
 

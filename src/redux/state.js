@@ -1,14 +1,18 @@
+import {rerenderEntireTree} from "../render";
 
 let state = {
-    posts : [
-        {id:1, posttext:'Hi, how are you?', likes:10 },
-        {id:2, posttext:'Privet, Medved!', likes:114 },
-        {id:3, posttext:'What do you do, tommorow?', likes:5 },
-        {id:4, posttext:'You nice man?', likes:4 },
-        {id:5, posttext:'I like Picnic', likes:107 },
-        {id:6, posttext:'I learn 16 lesson It-camasutra!', likes:54 },
-        {id:7, posttext:'Props is krytaja vesch!', likes:42 }
+    profilePage: {
+        posts : [
+        {id: 1, posttext: 'Hi, how are you?', likes: 10},
+        {id: 2, posttext: 'Privet, Medved!', likes: 114},
+        {id: 3, posttext: 'What do you do, tommorow?', likes: 5},
+        {id: 4, posttext: 'You nice man?', likes: 4},
+        {id: 5, posttext: 'I like Picnic', likes: 107},
+        {id: 6, posttext: 'I learn 16 lesson It-camasutra!', likes: 54},
+        {id: 7, posttext: 'Props is krytaja vesch!', likes: 42}
     ],
+        newPostText: ''
+    },
     dialogs: [
         {id: 1, name: 'Bobik'},
         {id: 2, name: 'Snezhok'},
@@ -31,14 +35,27 @@ let state = {
         {id:8, message:'Go eat sheet to garden!!!!!!'},
     ]
 }
+window.state = state
 
- export let addPost = (postMessage) => {
+ export let addPost = () => {
+
+    let postsLength = state.profilePage.posts.length++
+
     let newPost = {
-        id: 5,
-        posttext: postMessage,
+        id: postsLength,
+        posttext: state.profilePage.newPostText,
         likes: 0
     }
-    state.posts.push(newPost)
+     state.profilePage.posts.push(newPost)
+     state.profilePage.newPostText = ''
+
+     rerenderEntireTree(state)
+
+}
+
+export let updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText
+    rerenderEntireTree(state)
 }
 
 

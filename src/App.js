@@ -28,8 +28,10 @@ const App = (props) => {
                                /> } />
                         <Route path = '/profile'
                                render={ () => <Profile
-                                   postsData={props.state.posts}
+                                   postsData={props.state.profilePage.posts}
+                                   newPostText={props.state.profilePage.newPostText}
                                    addPost={props.addPost}
+                                   updateNewPostText={props.updateNewPostText}
                                /> } />
 
                         <Route path = '/news' component={ () => <News /> } />

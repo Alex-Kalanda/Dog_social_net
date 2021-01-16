@@ -5,8 +5,6 @@ import SunUnderWater from '../img/SunUnderWater.jpg'
 import ProfileInfo from "./MyPosts/ProfileInfo/ProfileInfo";
 
 
-
-
 const Profile = (props) => {
 
     return (

@@ -2,26 +2,18 @@ import React from 'react'
 import classes from './Dialogs.module.css'
 import Dialog from "./PersonalChat/PersonalChat"
 import OneMessage from "./OneMessage"
-import {addChatMessageActionCreator, updateChatMessageActionCreator} from "../../redux/dialogsReducer";
-
 
 
 
 const Dialogs = (props) => {
 
-
     let dialogsElements = props.dialogsData.map ( dialog => <Dialog name={dialog.name} id={dialog.id} /> )
     let messages = props.messagesData.map ( text => <OneMessage text={text.message} id={text.id}/> )
 
     let newMessage = React.createRef()
+    let message = newMessage.current.value
 
-    let addMessage = () => {
-        props.dispatch(addChatMessageActionCreator())
-    }
-    let updateChatMessage = () => {
-        let message = newMessage.current.value
-        props.dispatch(updateChatMessageActionCreator(message))
-    }
+
     return (
         <div className={classes.Messages}>
 
@@ -32,11 +24,11 @@ const Dialogs = (props) => {
                     <div className={classes.newMessage}>
 
                         <input type='text'
-                               onChange={updateChatMessage}
+                               onChange={props.updateChatMessage(message)}
                                ref={newMessage}
                                value={props.newChatMessage}/>
 
-                        <button onClick={addMessage}>New post</button>
+                        <button onClick={props.addMessage}>New post</button>
 
                     </div>
 

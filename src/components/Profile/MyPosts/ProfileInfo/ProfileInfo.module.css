@@ -6,6 +6,7 @@
 .Avatar {
     width: 160px;
     margin-right: 20px;
+    border-radius: 20px;
 }
 .Info h1 {
     font-size: 20px;

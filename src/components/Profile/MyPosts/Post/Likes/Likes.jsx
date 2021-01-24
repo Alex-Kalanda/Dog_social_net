@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../../../../App.css'
-import like from '../../../../img/like.png'
+import like from '../../../../img/like2.png'
 import classes from './Likes.module.css'
 
 

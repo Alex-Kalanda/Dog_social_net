@@ -8,9 +8,9 @@ const Post = (props) => {
     return (
         <div className={classes.Post}>
             <img className={classes.Avatar} src={avatar} alt="ava"/>
-            {props.message}
+            <div className={classes.textMessage}>{props.message}</div>
             <div className={classes.like}>
-                {props.likes}
+                <div className={classes.numberOfLikes}>{props.likes}</div>
                 <Likes/>
             </div>
         </div>

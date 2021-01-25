@@ -2,6 +2,8 @@ import React from 'react'
 import classes from './Dialogs.module.css'
 import Dialog from "./PersonalChat/PersonalChat"
 import OneMessage from "./OneMessage"
+
+
 const Dialogs = (props) => {
 
     let dialogsElements = props.dialogs.map(dialog => <Dialog name={dialog.name} id={dialog.id}/>)

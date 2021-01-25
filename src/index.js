@@ -7,27 +7,17 @@ import App from "./App";
 import './index.css';
 import {Provider} from "react-redux";
 
+ReactDOM.render(
+    <React.StrictMode>
+        <BrowserRouter>
+            <Provider store={store}>
+                <App/>
+            </Provider>
+        </BrowserRouter>
 
-let rerenderEntireTree = () => {
-    ReactDOM.render(
-        <React.StrictMode>
-            <BrowserRouter>
-                <Provider store={store}>
-                    <App/>
-                </Provider>
-            </BrowserRouter>
-
-        </React.StrictMode>,
-        document.getElementById('root')
-    );
-}
-
-rerenderEntireTree(store.getState())
-
-store.subscribe(() => {
-    let state = store.getState()
-    rerenderEntireTree(state)
-})
+    </React.StrictMode>,
+    document.getElementById('root')
+)
 
 
 // If you want to start measuring performance in your app, pass a function

@@ -3,6 +3,7 @@ import classes from './News.module.css'
 
 
 const News = () => {
+
     return (
         <div className={classes.news}>
             <h1 className = 'CaptionPages'> Main news about me)</h1>

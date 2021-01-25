@@ -2,17 +2,20 @@ import React from 'react'
 import classes from './Dialogs.module.css'
 import Dialog from "./PersonalChat/PersonalChat"
 import OneMessage from "./OneMessage"
-
-
-
 const Dialogs = (props) => {
 
-    let dialogsElements = props.dialogsData.map ( dialog => <Dialog name={dialog.name} id={dialog.id} /> )
-    let messages = props.messagesData.map ( text => <OneMessage text={text.message} id={text.id}/> )
+    let dialogsElements = props.dialogs.map(dialog => <Dialog name={dialog.name} id={dialog.id}/>)
+    let messages = props.messages.map(text => <OneMessage text={text.message} id={text.id}/>)
 
     let newMessage = React.createRef()
-    let message = newMessage.current.value
 
+    let onAddMessage = () => {
+        props.addChatMessage()
+    }
+    let onUpdateChatMessage = () => {
+        let message = newMessage.current.value
+        props.updateChatMessage(message)
+    }
 
     return (
         <div className={classes.Messages}>
@@ -24,11 +27,11 @@ const Dialogs = (props) => {
                     <div className={classes.newMessage}>
 
                         <input type='text'
-                               onChange={props.updateChatMessage(message)}
+                               onChange={onUpdateChatMessage}
                                ref={newMessage}
                                value={props.newChatMessage}/>
 
-                        <button onClick={props.addMessage}>New post</button>
+                        <button onClick={onAddMessage}>New post</button>
 
                     </div>
 

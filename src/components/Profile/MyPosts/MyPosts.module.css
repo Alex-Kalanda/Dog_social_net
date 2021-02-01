@@ -1,33 +1,3 @@
 .posts {
     color: #69747b;
 }
-.newPost button {
-    padding: 10px 20px;
-    background-color: gray;
-    color: white;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    margin-right: 20px;
-}
-.newPost button:hover {
-    background-color: gray;
-    color: black;
-    border: 1px solid gray;
-    padding: 9px 19px;
-}
-.newPost button:active {
-    background-color: #daffb2;
-    color: black;
-    border: 1px solid gray;
-    padding: 9px 19px;
-}
-
-
-
-.newPost input {
-    height: 30px;
-    padding: 10px;
-    width: 60%;
-    border-radius: 5px;
-    border: 1px solid grey;
-}

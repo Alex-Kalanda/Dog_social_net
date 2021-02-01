@@ -1,5 +1,5 @@
-.Messages {
-
+.AllMessagesBlock {
+    width: 70%;
 }
 .Dialogs {
     display: flex;
@@ -17,9 +17,12 @@
     margin-left: 40px;
 }
 .newMessage {
-    margin-bottom: 15px;
-    margin-left: 40px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
+/*
 .newMessage button {
     padding: 7px 15px;
     margin-left: 15px;
@@ -36,4 +39,4 @@
     padding: 7px 15px;
     border-radius: 5px;
     border: 1px solid gray;
-}
+}*/

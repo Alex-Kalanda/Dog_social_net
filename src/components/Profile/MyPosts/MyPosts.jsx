@@ -10,9 +10,7 @@ const MyPosts = (props) => {
 
     let newPostElement = React.createRef()
 
-    let onAddPost = () => {
-        props.addPost()
-        }
+    let onAddPost = () => props.addPost()
 
     let onPostChange = () => {
         let text = newPostElement.current.value
@@ -22,7 +20,7 @@ const MyPosts = (props) => {
     return (
         <div className={classes.posts}>
             <h2>My posts</h2>
-            <div className={classes.newPost}>
+            <div>
                 <button onClick={onAddPost}>New post</button>
                 <input  type='text'
                         ref={newPostElement}

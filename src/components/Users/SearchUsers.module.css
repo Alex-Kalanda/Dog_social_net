@@ -1,9 +1,50 @@
-.UserBlock {
-    margin-bottom: 30px;
+.FindArea {
+    margin-left: 30px;
 }
 
+.UserBlock {
+    margin: 15px 40px 30px 40px;
+    background-color: rgba(91,188,198,0.15);
+    border: 1px solid grey;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
 
 .UserPhoto {
-    width: 70px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+.UserPhoto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+.Img_Button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5%;
+}
+.LivingPlace {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.Left_UserInfo {
+    width: 75%;
+    position: relative;
+}
+.DogName {
+    font-size: 2em;
+    color: brown;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.Status {
+    color: #69747b;
 }

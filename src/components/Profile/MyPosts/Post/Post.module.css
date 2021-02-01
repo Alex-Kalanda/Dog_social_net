@@ -1,0 +1,23 @@
+.Avatar {
+    width: 40px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.Post {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+.like {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.numberOfLikes {
+    font-weight: 500;
+}
+.textMessage {
+    color: black;
+}

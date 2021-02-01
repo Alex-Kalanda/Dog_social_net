@@ -1,0 +1,33 @@
+.AppWraper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: "Lucida Console", serif;
+    line-height: 20px;
+}
+
+.NavContent {
+    display: flex;
+    flex-direction: row;
+}
+
+.dialogs {
+    margin-left: 20px;
+    padding: 15px;
+    background-color: #fff1d6;
+    width: 75%;
+}
+
+.MainBlock {
+    margin-left: 20px;
+    padding: 15px;
+    background-color: #fff1d6;
+    width: 75%;
+}
+
+.CaptionPages {
+    color: black;
+    font-size: 25px;
+    margin: 0 0 40px 30px;
+}

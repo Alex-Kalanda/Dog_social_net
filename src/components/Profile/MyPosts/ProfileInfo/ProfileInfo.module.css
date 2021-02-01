@@ -1,0 +1,15 @@
+.Ava_Info {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+.Avatar {
+    width: 160px;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+.Info h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}

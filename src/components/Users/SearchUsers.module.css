@@ -1,5 +1,6 @@
 .FindArea {
     margin-left: 30px;
+    margin-bottom: 20px;
 }
 
 .UserBlock {
@@ -47,4 +48,28 @@
 }
 .Status {
     color: #69747b;
+}
+.FollowerButton{
+    background-color: rgba(218,255,178,1);
+    color: black;
+}
+.selectOfPage span {
+    font-size: 20px;
+    color: #69747b;
+    margin-right: 2px;
+}
+.selectOfPage {
+    margin-left: 8%;
+    cursor: pointer;
+
+}
+.selectOfPage span:first-child {
+    margin-right: 30px;
+    color: black;
+    cursor: default;
+}
+.selectOfPage .selectedPage {
+    font-weight: bold;
+    font-size: 26px;
+    color: black;
 }

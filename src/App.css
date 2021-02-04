@@ -39,7 +39,6 @@ button {
     border-radius: 5px;
     border: 1px solid gray;
     min-width: 100px;
-
 }
 button:hover {
     background-color: gray;

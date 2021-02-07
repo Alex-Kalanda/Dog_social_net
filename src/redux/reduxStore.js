@@ -6,9 +6,11 @@ import {usersReducer} from "./usersReducer";
 let reducers = combineReducers({
     profilePage: profileReducer,
     chats: dialogsReducer,
-    usersPage: usersReducer
+    usersPage: usersReducer,
 })
 
 let store = createStore(reducers)
+
+window.store = store
 
 export default store

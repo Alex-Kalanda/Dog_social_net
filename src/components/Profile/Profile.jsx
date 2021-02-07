@@ -5,12 +5,12 @@ import ProfileInfo from "./MyPosts/ProfileInfo/ProfileInfo";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
 
-const Profile = () => {
+const Profile = (props) => {
 
     return (
         <div className={classes.Content}>
             <img className={classes.HeadImg} src={SunUnderWater} alt="HeadImg"/>
-            <ProfileInfo />
+            <ProfileInfo profile={props.profile}/>
             <MyPostsContainer />
         </div>
     )

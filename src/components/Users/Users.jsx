@@ -2,6 +2,8 @@ import classes from "./SearchUsers.module.css";
 import '../../App.css'
 import React from "react";
 import Preloader from "../MicriComponents/Preloader/Preloader";
+import noPhoto from '../img/noPhoto.jpeg'
+import {NavLink} from "react-router-dom";
 
 let Users = (props) => {
 
@@ -41,7 +43,9 @@ let Users = (props) => {
 
                 <div className={classes.Img_Button}>
                     <div className={classes.UserPhoto}>
-                        <img src={u.photos.small} alt="userPhoto"/>
+                        <NavLink to={'/profile/' + u.id}>
+                            <img src={u.photos.small != null ? u.photos.small : noPhoto} alt="userPhoto"/>
+                        </NavLink>
                     </div>
                     <div> {u.followed
                         ? <button className={classes.FollowerButton} onClick={() => {

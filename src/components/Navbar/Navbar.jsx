@@ -6,12 +6,12 @@ const Navbar = () => {
     return (
         <nav className={classes.Nav}>
             <ul>
-                <li><NavLink to="/profile">Profile</NavLink></li>
-                <li><NavLink to="/users">Search users</NavLink></li>
-                <li><NavLink to="/dialogs">Messages</NavLink></li>
-                <li><NavLink to="/news">News</NavLink></li>
-                <li><NavLink to="/music">Music</NavLink></li>
-                <li><NavLink to="/settings">Settings</NavLink></li>
+                <li><NavLink to='/profile'>Profile</NavLink></li>
+                <li><NavLink to='/users'>Search users</NavLink></li>
+                <li><NavLink to='/dialogs'>Messages</NavLink></li>
+                <li><NavLink to='/news'>News</NavLink></li>
+                <li><NavLink to='/music'>Music</NavLink></li>
+                <li><NavLink to='/settings'>Settings</NavLink></li>
             </ul>
         </nav>
     )

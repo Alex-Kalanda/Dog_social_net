@@ -1,5 +1,5 @@
 
-const Users = () => {
+const ListOfUsers = () => {
 
     let arrayUsers = [
         {
@@ -88,4 +88,4 @@ return (
 
 }
 
-export default Users
+export default ListOfUsers

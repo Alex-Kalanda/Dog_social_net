@@ -1,6 +1,7 @@
 import classes from "./SearchUsers.module.css";
 import '../../App.css'
 import React from "react";
+import Preloader from "../MicriComponents/Preloader/Preloader";
 
 let Users = (props) => {
 
@@ -23,6 +24,7 @@ let Users = (props) => {
         <div className={classes.selectOfPage}>
             <span>Page</span>
 
+
             {pages.map(item => {
                 return <span
                     className={props.currentPage === item && classes.selectedPage}
@@ -30,7 +32,9 @@ let Users = (props) => {
                         props.onPageChanged(item)
                     }}>{item}</span>
             })}
-
+            <div className='PreloaderUsers'>
+                {props.isFetching ? <Preloader/> : null}
+            </div>
         </div>
         {props.users.map(u =>
             <div key={u.id} className={classes.UserBlock}>

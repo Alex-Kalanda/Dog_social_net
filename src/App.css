@@ -60,5 +60,10 @@ input {
     border: 1px solid grey;
     min-width: 150px;
     padding-left: 10px;
+}
 
+/* preloaders */
+
+.PreloaderUsers {
+    margin: 0 auto;
 }

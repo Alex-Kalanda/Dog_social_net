@@ -1,12 +1,18 @@
 import React from 'react'
 import LogoDog from '../img/logo_dog.jpg'
 import classes from './Header.module.css'
+import {NavLink} from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
     return (
     <header className = {classes.Header}>
         <img src={LogoDog} alt="LogoDog"/>
-        <p>Welcome to page about Pisunator!</p>
+        <p>Social network for frontend dev!</p>
+        <div>
+            {props.isAuth
+                ? props.login
+                : <NavLink to={'/login'}>LOGIN</NavLink>}
+        </div>
     </header>
     )
 }

@@ -39,8 +39,6 @@ export const dialogsReducer = (state = initialisation, action) => {
                 newChatMessage: ''
             }
 
-
-
         case UPDATE_CHAT_MESSAGE:
             return {
                 ...state,

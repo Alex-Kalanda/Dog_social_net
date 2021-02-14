@@ -4,7 +4,6 @@ import React from "react";
 import Preloader from "../MicriComponents/Preloader/Preloader";
 import noPhoto from '../img/noPhoto.jpeg'
 import {NavLink} from "react-router-dom";
-import {usersAPI} from "../../API";
 
 let Users = (props) => {
 
@@ -27,7 +26,6 @@ let Users = (props) => {
         <div className={classes.selectOfPage}>
             <span>Page</span>
 
-
             {pages.map(item => {
                 return <span
                     className={props.currentPage === item && classes.selectedPage}
@@ -35,6 +33,7 @@ let Users = (props) => {
                         props.onPageChanged(item)
                     }}>{item}</span>
             })}
+
             <div className='PreloaderUsers'>
                 {props.isFetching ? <Preloader/> : null}
             </div>
@@ -51,31 +50,12 @@ let Users = (props) => {
                     <div> {u.followed
                         ? <button disabled={props.followingInProgress.some(id => id === u.id)}
                                   className={classes.FollowerButton}
-                                  onClick={() => {
-                                      props.toggleFollowingInProgress(true, u.id)
-                                      usersAPI.unFollow(u.id)
-                                          .then(data => {
-                                              if (data.resultCode === 0) {
-                                                  props.unFollow(u.id)
-                                              }
-                                              props.toggleFollowingInProgress(false, u.id)
-                                          })
-                                  }}>UnFollow</button>
-
+                                  onClick={() => {props.unFollow(u.id)}
+                                  }>UnFollow</button>
 
                         : <button disabled={props.followingInProgress.some(id => id === u.id)}
-                                  onClick={() => {
-                                      props.toggleFollowingInProgress(true, u.id)
-                                      usersAPI.follow(u.id)
-                                          .then(data => {
-                                              if (data.resultCode === 0) {
-                                                  props.follow(u.id)
-                                              }
-                                              props.toggleFollowingInProgress(false, u.id)
-                                          })
-                                  }}>Follow</button>}
-
-
+                                  onClick={() => {props.follow(u.id)}
+                                  }>Follow</button>}
                     </div>
                 </div>
 

@@ -9,12 +9,11 @@ const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING'
 const TOGGLE_IS_FOLLOWING_PROGRESS = 'TOGGLE_IS_FOLLOWING_PROGRESS'
 
 
-
 let initialState = {
     users: [],
     pageSize: 100,
     totalUsersCount: 0,
-    currentPage: 2,
+    currentPage: 1,
     isFetching: false,
     followingInProgress: [],
 }
@@ -66,6 +65,7 @@ export const usersReducer = (state = initialState, action) => {
     }
 }
 
+
 export const followSuccess = (userId) => ({type: FOLLOW, userId })
 export const unFollowSuccess = (userId) => ({type: UNFOLLOW, userId})
 export const setUsers = (users) => ({type: SET_USERS, users})
@@ -86,7 +86,6 @@ export const getUsers =(currentPage, pageSize)=>{
                 dispatch(toggleIsFetching(false))
             })}
 }
-
 export const follow =(userId)=> {
     return (dispatch) => {
         dispatch(toggleFollowingProgress(true, userId))

@@ -42,23 +42,17 @@ export const dialogsReducer = (state = initialisation, action) => {
         case UPDATE_CHAT_MESSAGE:
             return {
                 ...state,
-                newChatMessage: action.newMessage
+                newChatMessage: action.message
             }
         default:
             return state
     }
 }
 
-export const addChatMessageActionCreator = () => {
-    return {
-        type: ADD_MESSAGE
-    }
-}
-export const updateChatMessageActionCreator = (message) => {
-    return {
-        type: UPDATE_CHAT_MESSAGE,
-        newMessage: message
-    }
-}
+export const addChatMessageActionCreator = () => ({type: ADD_MESSAGE})
+export const updateChatMessageActionCreator = (message) => ({type: UPDATE_CHAT_MESSAGE, message})
+
+
+
 
 export default dialogsReducer

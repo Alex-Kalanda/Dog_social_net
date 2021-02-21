@@ -4,7 +4,6 @@ import Dialog from "./PersonalChat/PersonalChat"
 import OneMessage from "./OneMessage"
 import '../../App.css'
 
-
 const Dialogs = (props) => {
 
     let dialogsElements = props.dialogs.map(dialog => <Dialog name={dialog.name} id={dialog.id}/>)
